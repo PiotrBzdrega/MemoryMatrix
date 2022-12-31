@@ -14,7 +14,7 @@ public class Kasten {
 
 
     }
-
+    // define all objects on Kasten
     private void initKasten (){
         for (int i=0;i<yHeight;i++){
             for (int j=0;j<xLength;j++){
@@ -23,9 +23,12 @@ public class Kasten {
             }
         }
     }
-
+    
+    //create layout
     private void createCanvas (){
 
     }
+    
+    
 
 }
