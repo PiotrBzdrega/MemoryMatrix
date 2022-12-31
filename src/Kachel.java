@@ -10,11 +10,12 @@ public class Kachel {
         this.color=color;
         this.state=false;
     }
-
+    //enable object
     public void lightUp(){
 
         this.state= true;
     }
+    //disable object
     public void fadeOut(){
 
         this.state= false;
