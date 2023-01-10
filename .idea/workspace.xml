@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd9f505-c097-4da4-a5b3-1bf3a8ade7c4" name="Changes" comment="Start up MemoryMatrix&#10;-base GUI class w/ button&#10;-Grid &amp; Tile classes constructors">
+    <list default="true" id="2dd9f505-c097-4da4-a5b3-1bf3a8ade7c4" name="Changes" comment="Cell selected method">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Grid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GridTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kachel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kachel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryMatrix.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryMatrix.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Guiu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Guiu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kasten.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -37,9 +52,49 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.GridTest.amountSelectedElementsAndRandomnessCheck">
+    <configuration name="GridTest.amountSelectedElements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MemoryMatrix" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GridTest" />
+      <option name="METHOD_NAME" value="amountSelectedElements" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GridTest.amountSelectedElementsAndRandomnessCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MemoryMatrix" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GridTest" />
+      <option name="METHOD_NAME" value="amountSelectedElementsAndRandomnessCheck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GridTest.amountSelectedElementsAndRandomnessCheck" />
+        <item itemvalue="JUnit.GridTest.amountSelectedElements" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -56,7 +111,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672298568369</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Kachel.java update comment">
+      <created>1672461671912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672461671912</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Cell selected method">
+      <created>1673301158820</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673301158820</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +168,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start up MemoryMatrix&#10;-base GUI class w/ button&#10;-Grid &amp; Tile classes constructors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start up MemoryMatrix&#10;-base GUI class w/ button&#10;-Grid &amp; Tile classes constructors" />
+    <MESSAGE value="Kachel.java update comment" />
+    <MESSAGE value="Cell selected method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cell selected method" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="grid.get(57).state" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
