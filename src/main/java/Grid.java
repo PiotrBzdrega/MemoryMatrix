@@ -1,23 +1,32 @@
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Random;
 
 public class Grid {
 
     private final int xRows;
+    private String  state;
     private int coveredElements;
     private ArrayList<Cell> grid=new ArrayList<>();
 
+    // TODO
+    //  verify if change state return true
     /**
      * init puzzle
      */
     public Grid(int xLength) {
         this.xRows=xLength;
-        coveredElements=xLength;
+        changeState("Covered");
         initGrid();
-        createPuzzle();
         createCanvas();
+    }
+
+    //TODO
+    // create here some error
+    // if nextState==this.state
+    private boolean changeState(String nextState){
+        if(!nextState.equals(this.state))
+            this.state=nextState;
+        return nextState.equals(this.state) ;
     }
 
     /**
@@ -39,19 +48,16 @@ public class Grid {
 
     }
 
+    // TODO
+    //  beforehand create setting window
+    public void startGame(){
+
+    }
     /**
-     * create riddle to be solve w/ standard amount of marked cells
+     * create riddle to be solved w/ standard amount of marked cells
      */
     public void createPuzzle(){
-        markSelected(generateRandomSet(this.coveredElements));
-    }
-
-    /**
-     * create riddle to be solve w/ new amount of marked cells
-     */
-    public void createPuzzle(int markedElements){
-        this.coveredElements=markedElements;
-        createPuzzle();
+            markSelected(generateRandomSet(this.coveredElements));
     }
 
     /**
@@ -96,6 +102,13 @@ public class Grid {
         return coveredCells;
     }
 
+    public void changeCoveredElements(int elements){
+        if (isCoveredElementQuantityValid(elements))
+            this.coveredElements=elements;
+        else
+            error("wrong quantity of CoveredElements");
+    }
+
     /**
      * remove selection from all elements.
      */
@@ -103,6 +116,26 @@ public class Grid {
         for (Integer b:getCoveredCells()){
             grid.get(b).deselect();
         }
+
+
+
+    }
+
+    public void reveal(){
+
+    }
+    /**
+     * verify if quantity of covered Elements is correct in regard to rows in puzzle
+     */
+    private boolean isCoveredElementQuantityValid(int elements){
+        return (this.xRows * this.xRows) >= elements && elements >= 1;
+    }
+
+    /**
+     * error template to print
+     */
+    private void error(String message){
+        System.out.println("During execution of method: "+(new Throwable().getStackTrace()[0].getMethodName()) + ", error: \""+ message + "\" comes up.");
     }
     
 
