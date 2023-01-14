@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd9f505-c097-4da4-a5b3-1bf3a8ade7c4" name="Changes" comment="Cell selected method">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Grid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GridTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2dd9f505-c097-4da4-a5b3-1bf3a8ade7c4" name="Changes" comment="Class convention name change Kasten, Katchen -&gt; Cell, Grid">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryMatrix.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryMatrix.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Guiu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Guiu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kasten.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GridTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GridTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,16 +36,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "settings.editor.selected.configurable": "editor.preferences.gutterIcons"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -125,7 +112,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673301158820</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Junit test class">
+      <created>1673320712228</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673320712228</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Project configuration files">
+      <created>1673321060043</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673321060043</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Class convention name change Kasten, Katchen -&gt; Cell, Grid">
+      <created>1673321135901</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673321135901</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,7 +178,10 @@
     <MESSAGE value="Start up MemoryMatrix&#10;-base GUI class w/ button&#10;-Grid &amp; Tile classes constructors" />
     <MESSAGE value="Kachel.java update comment" />
     <MESSAGE value="Cell selected method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cell selected method" />
+    <MESSAGE value="Junit test class" />
+    <MESSAGE value="Project configuration files" />
+    <MESSAGE value="Class convention name change Kasten, Katchen -&gt; Cell, Grid" />
+    <option name="LAST_COMMIT_MESSAGE" value="Class convention name change Kasten, Katchen -&gt; Cell, Grid" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
