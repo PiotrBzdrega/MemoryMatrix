@@ -1,7 +1,9 @@
+import java.awt.*;
+
 public class Cell {
     private final int xDim;
     private final int yDim;
-    private int color;
+    private Color color;
     private boolean state, selected;
 
 
@@ -9,7 +11,7 @@ public class Cell {
         return selected;
     }
 
-    public Cell(int xDim, int yDim, int color) {
+    public Cell(int xDim, int yDim, Color color) {
         this.xDim=xDim;
         this.yDim=yDim;
         this.color=color;
@@ -32,5 +34,9 @@ public class Cell {
     public void fadeOut(){
 
         this.state= false;
+    }
+
+    public Color getColor() {
+        return color;
     }
 }
