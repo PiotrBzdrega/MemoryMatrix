@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -8,6 +9,14 @@ public class Grid {
     private int coveredElements;
     private ArrayList<Cell> grid=new ArrayList<>();
 
+    private Gui gui;
+
+
+    public static void main(String[] args) {
+        Grid grid =new Grid(10);
+    }
+
+
     // TODO
     //  verify if change state return true
     /**
@@ -17,7 +26,7 @@ public class Grid {
         this.xRows=xLength;
         changeState("Covered");
         initGrid();
-        createCanvas();
+        initializeCanvas();
     }
 
     //TODO
@@ -35,8 +44,9 @@ public class Grid {
     private void initGrid(){
         for (int i=0;i<xRows;i++){
             for (int j=0;j<xRows;j++){
-                Cell cell=new Cell(j, i, 0);
+                Cell cell=new Cell(j, i, Color.white);
                 grid.add(cell);
+
             }
         }
     }
@@ -44,7 +54,9 @@ public class Grid {
     /**
      * create canvas
      */
-    private void createCanvas (){
+    private void initializeCanvas (){
+        gui=new Gui(this.grid,this.xRows);
+
 
     }
 
@@ -110,6 +122,14 @@ public class Grid {
     }
 
     /**
+     * verify if quantity of covered Elements is correct in regard to rows in puzzle
+     */
+    private boolean isCoveredElementQuantityValid(int elements){
+        return (this.xRows * this.xRows) >= elements && elements >= 1;
+    }
+
+
+    /**
      * remove selection from all elements.
      */
     public void deselectAllSelected(){
@@ -124,12 +144,7 @@ public class Grid {
     public void reveal(){
 
     }
-    /**
-     * verify if quantity of covered Elements is correct in regard to rows in puzzle
-     */
-    private boolean isCoveredElementQuantityValid(int elements){
-        return (this.xRows * this.xRows) >= elements && elements >= 1;
-    }
+
 
     /**
      * error template to print
