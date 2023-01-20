@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd9f505-c097-4da4-a5b3-1bf3a8ade7c4" name="Changes" comment="Class convention name change Kasten, Katchen -&gt; Cell, Grid">
+    <list default="true" id="2dd9f505-c097-4da4-a5b3-1bf3a8ade7c4" name="Changes" comment="modified order of calls in Junit test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Guiu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GridTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GridTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Grid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Guiu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GridTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GridTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -36,16 +42,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "settings.editor.selected.configurable": "editor.preferences.gutterIcons"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.gutterIcons&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -54,7 +60,30 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GridTest.amountSelectedElementsAndRandomnessCheck">
+  <component name="RunManager" selected="Application.Grid">
+    <configuration name="Grid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Grid" />
+      <module name="MemoryMatrix" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Gui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Gui" />
+      <module name="MemoryMatrix" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GridTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MemoryMatrix" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GridTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GridTest.amountSelectedElements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MemoryMatrix" />
       <option name="PACKAGE_NAME" value="" />
@@ -77,6 +106,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Grid" />
+        <item itemvalue="Application.Guiu" />
+        <item itemvalue="JUnit.GridTest" />
         <item itemvalue="JUnit.GridTest.amountSelectedElementsAndRandomnessCheck" />
         <item itemvalue="JUnit.GridTest.amountSelectedElements" />
       </list>
@@ -133,7 +165,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673321135901</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="start game functionality instead createPuzzle alone">
+      <created>1673729852715</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673729852715</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Junit workspace">
+      <created>1673729914011</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673729914011</updated>
+    </task>
+    <task id="LOCAL-00009" summary="modified order of calls in Junit test">
+      <created>1673730066907</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673730066907</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,7 +234,10 @@
     <MESSAGE value="Junit test class" />
     <MESSAGE value="Project configuration files" />
     <MESSAGE value="Class convention name change Kasten, Katchen -&gt; Cell, Grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="Class convention name change Kasten, Katchen -&gt; Cell, Grid" />
+    <MESSAGE value="start game functionality instead createPuzzle alone" />
+    <MESSAGE value="Junit workspace" />
+    <MESSAGE value="modified order of calls in Junit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified order of calls in Junit test" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
