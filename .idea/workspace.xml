@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd9f505-c097-4da4-a5b3-1bf3a8ade7c4" name="Changes" comment="modified order of calls in Junit test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Guiu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GridTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GridTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Grid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Guiu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GridTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GridTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="2dd9f505-c097-4da4-a5b3-1bf3a8ade7c4" name="Changes" comment="config file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,16 +50,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Grid">
-    <configuration name="Grid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Grid" />
+  <component name="RunManager" selected="Application.Game">
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Game" />
       <module name="MemoryMatrix" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Gui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Gui" />
+    <configuration name="Grid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Grid" />
       <module name="MemoryMatrix" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -106,8 +96,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Game" />
         <item itemvalue="Application.Grid" />
-        <item itemvalue="Application.Guiu" />
         <item itemvalue="JUnit.GridTest" />
         <item itemvalue="JUnit.GridTest.amountSelectedElementsAndRandomnessCheck" />
         <item itemvalue="JUnit.GridTest.amountSelectedElements" />
@@ -186,7 +176,105 @@
       <option name="project" value="LOCAL" />
       <updated>1673730066907</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="initialized Canvas">
+      <created>1674254821029</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674254821029</updated>
+    </task>
+    <task id="LOCAL-00011" summary="correct Junit test">
+      <created>1674254868053</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674254868053</updated>
+    </task>
+    <task id="LOCAL-00012" summary="game base">
+      <created>1674254888143</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674254888143</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Guiu deleted">
+      <created>1674254907432</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674254907432</updated>
+    </task>
+    <task id="LOCAL-00014" summary="main in Grid class">
+      <created>1674254932761</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674254932761</updated>
+    </task>
+    <task id="LOCAL-00015" summary="color getter">
+      <created>1674254960637</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674254960637</updated>
+    </task>
+    <task id="LOCAL-00016" summary="base version gui">
+      <created>1674255008482</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1674255008482</updated>
+    </task>
+    <task id="LOCAL-00017" summary="red .class files 🤔">
+      <created>1674255036155</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1674255036155</updated>
+    </task>
+    <task id="LOCAL-00018" summary="color added to cell">
+      <created>1674600324491</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1674600324491</updated>
+    </task>
+    <task id="LOCAL-00019" summary="CircularLinkedList class added (not used)">
+      <created>1674600362797</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1674600362797</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Main class to call puzzle">
+      <created>1674600451719</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1674600451719</updated>
+    </task>
+    <task id="LOCAL-00021" summary="getGrid() to use it in GUI class">
+      <created>1674600512477</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1674600512477</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Panel and Frame separeted">
+      <created>1674600907637</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1674600907637</updated>
+    </task>
+    <task id="LOCAL-00023" summary="config file">
+      <created>1674600926544</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1674600926544</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,7 +325,21 @@
     <MESSAGE value="start game functionality instead createPuzzle alone" />
     <MESSAGE value="Junit workspace" />
     <MESSAGE value="modified order of calls in Junit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified order of calls in Junit test" />
+    <MESSAGE value="initialized Canvas" />
+    <MESSAGE value="correct Junit test" />
+    <MESSAGE value="game base" />
+    <MESSAGE value="Guiu deleted" />
+    <MESSAGE value="main in Grid class" />
+    <MESSAGE value="color getter" />
+    <MESSAGE value="base version gui" />
+    <MESSAGE value="red .class files " />
+    <MESSAGE value="color added to cell" />
+    <MESSAGE value="CircularLinkedList class added (not used)" />
+    <MESSAGE value="Main class to call puzzle" />
+    <MESSAGE value="getGrid() to use it in GUI class" />
+    <MESSAGE value="Panel and Frame separeted" />
+    <MESSAGE value="config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="config file" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
