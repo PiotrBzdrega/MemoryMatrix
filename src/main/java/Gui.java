@@ -12,17 +12,14 @@ public class Gui implements ActionListener  {
     JPanel panel;
     private ArrayList<JButton> button;
 
-    public Gui(ArrayList<Cell> grid,int size){
-        frame=new JFrame();
-        panel=new JPanel();
-        panel.setBounds(50,50,700,500);
-        panel.setLayout(new GridLayout(size,size));
-        createButtons(grid, size);
-        frame.add(panel,BorderLayout.CENTER);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("Title");
-        frame.pack();
-        frame.setVisible(true);
+    ArrayList<Cell> grid;
+
+    public Gui(ArrayList<Cell> grid, int size){
+        this.grid=grid;
+        System.out.println(size);
+        createPanel(size);
+        createButtons(size);
+        createFrame();
 
 /*        button = new JButton("adamek");
         button.addActionListener(this); //when button to be pressed, actionPerformed() will be called
@@ -42,28 +39,50 @@ public class Gui implements ActionListener  {
     frame.setVisible(true);*/
 }
 
-    private void createButtons(ArrayList<Cell> grid, int size){
-        JButton tempbutton;
-        for (int i=0;i<(size*size);i++){
-            tempbutton=new JButton();
-            tempbutton.setBackground(grid.get(i).getColor());
-            tempbutton.addActionListener(this);
-            tempbutton.setSize(50,50);
-            panel.add(tempbutton);
-        }
-
-
+    private void createPanel(int dimension){
+        panel=new JPanel();
+        panel.setBounds(0,0,500,500);
+        panel.setLayout(new GridLayout(dimension,dimension));
     }
-    // TODO
-    //  button.size fault
+    private void createFrame(){
+        frame=new JFrame();
+        frame.setSize(800,800);
+        //frame.getContentPane().add(panel);
+        frame.add(panel,null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("Memory Matrix");
+        frame.pack();
+        frame.setVisible(true);
+    }
+    /**
+     * initialize
+     */
+    private void createButtons(int size){
+        this.button=new ArrayList<>();
+        JButton tempButton;
+        for (int i=0;i<(size*size);i++){
+            tempButton=new JButton();
+            tempButton.setBackground(this.grid.get(i).getColor());
+            tempButton.addActionListener(this);
+            tempButton.setSize(50,50);
+            button.add(tempButton);
+            panel.add(tempButton);
+        }
+    }
+    /**
+     * pop up with set message
+     */
+    private void callMessage(String message){
+      //  if(eve.getSource() == jb1)
+            JOptionPane.showMessageDialog(panel, message);
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         for (int i=0;i< button.size();i++)
         if (e.getSource()==button.get(i)){
-            button.get(i).setBackground(Color.red);
+            this.grid.get(i).lightUp();
+            button.get(i).setBackground(this.grid.get(i).getColor());
         }
-/*        count++;
-        label.setText("Number of clicks "+ count);*/
     }
 }
-
