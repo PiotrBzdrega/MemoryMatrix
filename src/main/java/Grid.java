@@ -4,17 +4,16 @@ import java.util.Random;
 
 public class Grid {
 
+
     private final int xRows;
     private String  state;
     private int coveredElements;
-    private ArrayList<Cell> grid=new ArrayList<>();
 
-    private Gui gui;
-
-
-    public static void main(String[] args) {
-        Grid grid =new Grid(10);
+    public ArrayList<Cell> getGrid() {
+        return grid;
     }
+
+    private ArrayList<Cell> grid=new ArrayList<>();
 
 
     // TODO
@@ -26,7 +25,7 @@ public class Grid {
         this.xRows=xLength;
         changeState("Covered");
         initGrid();
-        initializeCanvas();
+        //initializeCanvas();
     }
 
     //TODO
@@ -44,20 +43,15 @@ public class Grid {
     private void initGrid(){
         for (int i=0;i<xRows;i++){
             for (int j=0;j<xRows;j++){
-                Cell cell=new Cell(j, i, Color.white);
+                Cell cell=new Cell(j, i);
                 grid.add(cell);
 
             }
         }
     }
 
-    /**
-     * create canvas
-     */
-    private void initializeCanvas (){
-        gui=new Gui(this.grid,this.xRows);
-
-
+    public int getxRows() {
+        return xRows;
     }
 
     // TODO
