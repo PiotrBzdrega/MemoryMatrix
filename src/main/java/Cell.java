@@ -1,42 +1,52 @@
 import java.awt.*;
 
 public class Cell {
+
     private final int xDim;
     private final int yDim;
-    private Color color;
-    private boolean state, selected;
+    private Color[] color;
+    private boolean state;
+    private boolean selected;
 
+    public Cell(int xDim, int yDim) {
+        this.xDim = xDim;
+        this.yDim = yDim;
+        this.color = new Color[2];
+        this.color[0] = Color.white;
+        this.color[1] = Color.red;
+        this.state = false;
+        this.selected = false;
+    }
 
     public boolean isSelected() {
         return selected;
     }
 
-    public Cell(int xDim, int yDim, Color color) {
-        this.xDim=xDim;
-        this.yDim=yDim;
-        this.color=color;
-        this.state=this.selected=false;
+
+    public void select() {
+        this.selected = true;
     }
 
-    public void select(){
-        this.selected=true;
-    }
-    public void deselect(){
-        this.selected=false;
+    public void deselect() {
+        this.selected = false;
     }
 
-    //enable object
-    public void lightUp(){
-
-        this.state= true;
-    }
-    //disable object
-    public void fadeOut(){
-
-        this.state= false;
+    /**
+     * enable cell
+     */
+    public void lightUp() {
+        this.state = true;
     }
 
-    public Color getColor() {
-        return color;
+    /**
+     * disable cell
+     */
+    public void fadeOut() {
+        this.state = false;
     }
+
+    public Color getColor(){
+        return (this.state ? this.color[1] : this.color[0]);
+    }
+
 }
