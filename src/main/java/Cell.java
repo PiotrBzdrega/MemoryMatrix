@@ -6,6 +6,9 @@ public class Cell {
     private final int yDim;
     private Color[] color;
     private boolean state;
+
+
+
     private boolean selected;
 
     public Cell(int xDim, int yDim) {
@@ -47,6 +50,10 @@ public class Cell {
 
     public Color getColor(){
         return (this.state ? this.color[1] : this.color[0]);
+    }
+
+    public boolean isState() {
+        return state;
     }
 
 }
