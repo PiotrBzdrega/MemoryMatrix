@@ -13,7 +13,7 @@ public class Grid {
         return grid;
     }
 
-    private ArrayList<Cell> grid=new ArrayList<>();
+    private ArrayList<Cell> grid;
 
 
     // TODO
@@ -23,24 +23,16 @@ public class Grid {
      */
     public Grid(int xLength) {
         this.xRows=xLength;
-        changeState("Covered");
+        //changeState("Covered");
         initGrid();
         //initializeCanvas();
-    }
-
-    //TODO
-    // create here some error
-    // if nextState==this.state
-    private boolean changeState(String nextState){
-        if(!nextState.equals(this.state))
-            this.state=nextState;
-        return nextState.equals(this.state) ;
     }
 
     /**
      * define all Cells on Grid
      */
     private void initGrid(){
+        this.grid=new ArrayList<>();
         for (int i=0;i<xRows;i++){
             for (int j=0;j<xRows;j++){
                 Cell cell=new Cell(j, i);
@@ -139,6 +131,19 @@ public class Grid {
 
     }
 
+    //TODO
+    // use command pattern
+    // to use function as parametr lightUp/fadeOut
+    public void changeState(boolean lightUp){
+        for (int i=0;i<grid.size();i++){
+            if (this.grid.get(i).isSelected()) {
+                if (lightUp && !this.grid.get(i).isState())
+                    this.grid.get(i).lightUp();
+                else if(!lightUp && this.grid.get(i).isState())
+                    this.grid.get(i).fadeOut();
+            }
+        }
+    }
 
     /**
      * error template to print
