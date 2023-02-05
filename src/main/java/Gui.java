@@ -16,7 +16,6 @@ public class Gui implements ActionListener  {
 
     public Gui(ArrayList<Cell> grid, int size){
         this.grid=grid;
-        System.out.println(size);
         createPanel(size);
         createButtons(size);
         createFrame();
@@ -65,10 +64,23 @@ public class Gui implements ActionListener  {
             tempButton.setBackground(this.grid.get(i).getColor());
             tempButton.addActionListener(this);
             tempButton.setSize(50,50);
+            //tempButton.setContentAreaFilled(false);
             button.add(tempButton);
             panel.add(tempButton);
         }
     }
+    public void toggleListener(){
+        for (JButton btn: button) {
+            if (btn.getAction()!=null)
+                btn.addActionListener(this);
+            else{
+                btn.removeActionListener(this);
+                System.out.println("removed Listener");
+            }
+
+        }
+    }
+
     /**
      * pop up with set message
      */
@@ -79,10 +91,19 @@ public class Gui implements ActionListener  {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        for (int i=0;i< button.size();i++)
-        if (e.getSource()==button.get(i)){
-            this.grid.get(i).lightUp();
-            button.get(i).setBackground(this.grid.get(i).getColor());
-        }
+        int i=button.indexOf(e.getSource());
+        this.grid.get(i).lightUp();
+        button.get(i).setBackground(this.grid.get(i).getColor());
     }
-}
+    public void refreshInterface(){
+        for (int i=0;i< button.size();i++) {
+
+            if (this.grid.get(i).isState()) {
+                System.out.println("hei");
+                button.get(i).setBackground(this.grid.get(i).getColor());
+                System.out.println(i);
+            }
+        }
+            }
+    }
+
