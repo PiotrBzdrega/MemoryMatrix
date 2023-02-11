@@ -1,0 +1,20 @@
+v0.1
+-random puzzles
+-start button to launch game 
+v0.2
+-pop up w/ settings for amount of rows and covered elements 
+-save last user settings in .bin file located in %TEMP
+v0.3
+-series game (start button only before first puzzle)
+new puzzle shows up after x seconds
+v0.4
+-3 wrong choices finish game
+v0.5
+-user statistics: 
+>how many puzzles have been solved
+>how many lost games
+v0.6
+-connect to cloud
+-ranking of users
+-lost puzzles
+
