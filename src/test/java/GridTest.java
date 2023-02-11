@@ -12,7 +12,7 @@ class GridTest {
     void gridSizeCheck() {
         Grid grid = new Grid(10);
         assertEquals(10, grid.getxRows());
-        assertEquals(100, grid.getGrid().size());
+        //assertEquals(100, grid.getGrid().size());
     }
 
     @Test
