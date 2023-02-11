@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -8,11 +9,7 @@ public class Grid {
     private String state;
     private int coveredElements;
 
-    private ArrayList<Cell> grid;
-
-    public ArrayList<Cell> getGrid() {
-        return grid;
-    }
+    private ArrayList<Cell> cells;
 
     // TODO
     //  verify if change state return true
@@ -39,10 +36,10 @@ public class Grid {
      * define all Cells on Grid
      */
     private void createGrid() {
-        this.grid = new ArrayList<>();
+        this.cells = new ArrayList<>();
         for (int i = 0; i < xRows * xRows; i++) {
             Cell cell = new Cell();
-            grid.add(cell);
+            cells.add(cell);
         }
     }
 
@@ -50,60 +47,26 @@ public class Grid {
         return xRows;
     }
 
-    // TODO
-    //  beforehand create setting window
-    public void startGame() {
-
+    public Color getCellColor(int idx) {
+        return cells.get(idx).getColor();
     }
 
-    /**
-     * create riddle to be solved w/ standard amount of marked cells
-     */
-    public void createPuzzle() {
-        markSelected(generateRandomSet(this.coveredElements));
+    public boolean cellState(int idx) {
+        return cells.get(idx).isState();
     }
 
-    /**
-     * generate Cell numbers in randomly
-     */
-    private ArrayList<Integer> generateRandomSet(int elements) {
-        Random rand = new Random();
-        ArrayList<Integer> sequenceList = new ArrayList<>();
-        ArrayList<Integer> randSet = new ArrayList<>();
-        int iter = elements;
-        for (int i = 0; i < grid.size(); i++) {
-            sequenceList.add(i);
-        }
-
-        while (iter > 0) {
-            int selected = rand.nextInt(sequenceList.size() - 1);
-            randSet.add(sequenceList.get(selected));
-            sequenceList.remove(selected);
-            iter--;
-        }
-        return randSet;
+    public boolean cellSelected(int idx) {
+        return cells.get(idx).isSelected();
     }
 
-    /**
-     * mark selected Cells in Grid
-     */
-    private void markSelected(ArrayList<Integer> randSet) {
-        for (Integer a : randSet) {
-            grid.get(a).select();
-        }
+    public void lightUpCell(int idx) {
+        cells.get(idx).lightUp();
     }
 
-    /**
-     * check which Elements are covered
-     */
-    public ArrayList<Integer> getCoveredCells() {
-        ArrayList<Integer> coveredCells = new ArrayList<>();
-        for (int i = 0; i < grid.size(); i++) {
-            if (grid.get(i).isSelected())
-                coveredCells.add(i);
-        }
-        return coveredCells;
+    public void fadeOutCell(int idx) {
+        cells.get(idx).fadeOut();
     }
+
 
     public void changeCoveredElements(int elements) {
         if (isCoveredElementQuantityValid(elements))
@@ -122,12 +85,69 @@ public class Grid {
     }
 
 
+    // TODO
+    //  beforehand create setting window
+    public void startGame() {
+
+    }
+
+    /**
+     * create riddle to be solved w/ standard amount of marked cells
+     */
+    public void createPuzzle() {
+        markSelected(generateRandomSet(this.coveredElements));
+        changeState(true);
+    }
+
+    /**
+     * generate Cell numbers in randomly
+     */
+    private ArrayList<Integer> generateRandomSet(int elements) {
+        Random rand = new Random();
+        ArrayList<Integer> sequenceList = new ArrayList<>();
+        ArrayList<Integer> randSet = new ArrayList<>();
+        int iter = elements;
+        for (int i = 0; i < cells.size(); i++) {
+            sequenceList.add(i);
+        }
+
+        while (iter > 0) {
+            int selected = rand.nextInt(sequenceList.size() - 1);
+            randSet.add(sequenceList.get(selected));
+            sequenceList.remove(selected);
+            iter--;
+        }
+        return randSet;
+    }
+
+    /**
+     * mark selected Cells in Grid
+     */
+    private void markSelected(ArrayList<Integer> randSet) {
+        for (Integer a : randSet) {
+            cells.get(a).select();
+        }
+    }
+
+    /**
+     * check which Elements are covered
+     */
+    public ArrayList<Integer> getCoveredCells() {
+        ArrayList<Integer> coveredCells = new ArrayList<>();
+        for (int i = 0; i < cells.size(); i++) {
+            if (cellSelected(i))
+                coveredCells.add(i);
+        }
+        return coveredCells;
+    }
+
+
     /**
      * remove selection from all elements.
      */
     public void deselectAllSelected() {
         for (Integer b : getCoveredCells()) {
-            grid.get(b).deselect();
+            cells.get(b).deselect();
         }
 
 
@@ -141,12 +161,12 @@ public class Grid {
     // use command pattern
     // to use function as parametr lightUp/fadeOut
     public void changeState(boolean lightUp) {
-        for (int i = 0; i < grid.size(); i++) {
-            if (this.grid.get(i).isSelected()) {
-                if (lightUp && !this.grid.get(i).isState())
-                    this.grid.get(i).lightUp();
-                else if (!lightUp && this.grid.get(i).isState())
-                    this.grid.get(i).fadeOut();
+        for (int i = 0; i < cells.size(); i++) {
+            if (cellSelected(i)) {
+                if (lightUp && !cellState(i))
+                    lightUpCell(i);
+                else if (!lightUp && cellState(i))
+                    fadeOutCell(i);
             }
         }
     }
