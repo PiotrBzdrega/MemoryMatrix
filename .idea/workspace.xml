@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd9f505-c097-4da4-a5b3-1bf3a8ade7c4" name="Changes" comment="remove target directory">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_21_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="2dd9f505-c097-4da4-a5b3-1bf3a8ade7c4" name="Changes" comment="new initial tests">
+      <change afterPath="$PROJECT_DIR$/design/features.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design/v0.1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design/v0.2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CellTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GuiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryMatrix.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryMatrix.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GridTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GridTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -48,16 +48,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "settings.editor.selected.configurable": "actions.on.save"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -66,7 +66,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GridTest.randomnessCheck">
+  <component name="RunManager" selected="Application.Game">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Game" />
       <module name="MemoryMatrix" />
@@ -112,10 +112,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GridTest.randomnessCheck" />
-        <item itemvalue="JUnit.GridTest.amountSelectedElementsAndRandomnessCheck" />
         <item itemvalue="Application.Game" />
         <item itemvalue="JUnit.GridTest" />
+        <item itemvalue="JUnit.GridTest.randomnessCheck" />
+        <item itemvalue="JUnit.GridTest.amountSelectedElementsAndRandomnessCheck" />
         <item itemvalue="Application.Grid" />
       </list>
     </recent_temporary>
@@ -346,7 +346,42 @@
       <option name="project" value="LOCAL" />
       <updated>1675596577624</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="remove .idea directory">
+      <created>1675596861725</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1675596861725</updated>
+    </task>
+    <task id="LOCAL-00033" summary="isState added">
+      <created>1675597005179</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1675597005179</updated>
+    </task>
+    <task id="LOCAL-00034" summary="startChapter method added">
+      <created>1675597043401</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1675597043401</updated>
+    </task>
+    <task id="LOCAL-00035" summary=".idea settings">
+      <created>1675597059199</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1675597059199</updated>
+    </task>
+    <task id="LOCAL-00036" summary="remove target files">
+      <created>1675660576565</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1675660576565</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -388,12 +423,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Class convention name change Kasten, Katchen -&gt; Cell, Grid" />
-    <MESSAGE value="start game functionality instead createPuzzle alone" />
-    <MESSAGE value="Junit workspace" />
-    <MESSAGE value="modified order of calls in Junit test" />
-    <MESSAGE value="initialized Canvas" />
-    <MESSAGE value="correct Junit test" />
     <MESSAGE value="game base" />
     <MESSAGE value="Guiu deleted" />
     <MESSAGE value="main in Grid class" />
@@ -413,9 +442,23 @@
     <MESSAGE value="narrow test case" />
     <MESSAGE value="modified changeState" />
     <MESSAGE value="remove target directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove target directory" />
+    <MESSAGE value="remove .idea directory" />
+    <MESSAGE value="isState added" />
+    <MESSAGE value="startChapter method added" />
+    <MESSAGE value=".idea settings" />
+    <MESSAGE value="remove target files" />
+    <MESSAGE value="new initial tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="new initial tests" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="grid.get(57).state" />
