@@ -9,13 +9,14 @@ public class Gui implements ActionListener {
     JFrame frame;
     private ArrayList<JButton> button;
 
-    ArrayList<Cell> grid;
+    Grid grid;
+    //ArrayList<Cell> grid;
 
-    public Gui(ArrayList<Cell> grid, int size) {
+    public Gui(Grid grid) {
         this.grid = grid;
 
         createFrame();
-        createButtons(size);
+        createButtons(this.grid.getxRows());
         frame.pack();
     }
 
@@ -52,12 +53,13 @@ public class Gui implements ActionListener {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 tempButton = new JButton();
-                tempButton.setBackground(this.grid.get(i).getColor());
+                tempButton.setName(j + "," + i);
+                tempButton.setBackground(grid.getCellColor(i));
                 tempButton.setEnabled(false);
                 tempButton.setSize(50, 50);
                 //tempButton.setContentAreaFilled(false);
                 button.add(tempButton);
-                //tempButton.addActionListener(this);
+                tempButton.addActionListener(this);
                 c.gridx = j;
                 c.gridy = i;
                 frame.getContentPane().add(tempButton, c);
@@ -84,6 +86,7 @@ public class Gui implements ActionListener {
 
     private void toggleListener() {
         for (JButton btn : button) {
+            System.out.print(btn);
             if (btn.getAction() != null)
                 btn.addActionListener(this);
             else {
@@ -94,14 +97,8 @@ public class Gui implements ActionListener {
     }
 
     private void toggleEnable() {
-        for (JButton btn : button) {
-            if (btn.isEnabled()) {
-                btn.setEnabled(false);
-            } else {
-                btn.setEnabled(true);
-            }
-
-        }
+        for (JButton btn : button)
+            btn.setEnabled(!btn.isEnabled());
     }
 
     /**
@@ -117,27 +114,38 @@ public class Gui implements ActionListener {
         //System.out.println(e.getSource());
         if (e.getSource() instanceof JButton) {
             JButton j = (JButton) e.getSource();
-            System.out.println();
+            System.out.println(e.getSource());
 
-            if (j.getName().equals("Start"))
+            if (j.getName().equals("Start")) {
                 j.setVisible(false);
-            else {
+                grid.changeState(false);
+                refreshInterface();
+                //toggleListener();
+                toggleEnable();
+            } else {
                 int i = button.indexOf(e.getSource());
-                this.grid.get(i).lightUp();
-                button.get(i).setBackground(this.grid.get(i).getColor());
+                if (grid.cellSelected(i)) {
+                    grid.lightUpCell(i);
+                    button.get(i).setBackground(grid.getCellColor(i));
+                }
+
+
             }
         }
-
-
     }
 
     public void refreshInterface() {
-        for (int i = 0; i < button.size(); i++) {
-
-            if (this.grid.get(i).isState()) {
-                button.get(i).setBackground(this.grid.get(i).getColor());
-            }
-        }
+        for (int i = 0; i < button.size(); i++)
+            button.get(i).setBackground(grid.getCellColor(i));
     }
+
+    public static void main(String[] args) {
+
+        Grid grid = new Grid();
+        Gui gui = new Gui(grid);
+        grid.createPuzzle();
+        gui.refreshInterface();
+    }
+
 }
 
