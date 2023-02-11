@@ -18,7 +18,7 @@ public class Game {
         grid.createPuzzle();
         grid.changeState(true);
         gui.refreshInterface();
-        //gui.freezeGrid()
+
     }
 
     public void startGuessing() {
@@ -26,16 +26,11 @@ public class Game {
         gui.refreshInterface();
     }
 
-    public void freezeGrid() {
-
-    }
-
     public static void main(String[] args) {
 
-        Grid grid = new Grid(5);
+        Grid grid = new Grid();
         Gui gui = new Gui(grid.getGrid(), grid.getxRows());
         Game game = new Game(grid, gui);
-        grid.changeCoveredElements(2);
         game.startChapter();
         //   grid.createPuzzle();
     }
