@@ -4,16 +4,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class Gui implements ActionListener {
+
+public class Gui implements ActionListener, WatchObserver {
 
     JFrame frame;
     private ArrayList<JButton> button;
 
     Grid grid;
-    //ArrayList<Cell> grid;
+    Game game;
+
+    UserInterface ui;
 
     public Gui(Grid grid) {
         this.grid = grid;
+        this.ui=new UserInterface();
+
+        //this.game=new Game();
 
         createFrame();
         createButtons(this.grid.getxRows());
@@ -69,6 +75,7 @@ public class Gui implements ActionListener {
         tempButton = new JButton("Start");
         tempButton.setName("Start");
         tempButton.addActionListener(this);
+        ui.addElement(tempButton);
         c.fill = GridBagConstraints.BOTH;
         c.ipady = 0;       //reset to default
         c.weightx = 1.0;   //request any extra vertical space
@@ -117,11 +124,16 @@ public class Gui implements ActionListener {
             System.out.println(e.getSource());
 
             if (j.getName().equals("Start")) {
-                j.setVisible(false);
+                game=new Game(this);
+                j.setText("3:57");
+                //j.setVisible(false);
+                j.setEnabled(false);
+                j.removeActionListener(this);
                 grid.changeState(false);
                 refreshInterface();
                 //toggleListener();
                 toggleEnable();
+                game.start();
             } else {
                 int i = button.indexOf(e.getSource());
                 if (grid.cellSelected(i)) {
@@ -139,13 +151,22 @@ public class Gui implements ActionListener {
             button.get(i).setBackground(grid.getCellColor(i));
     }
 
+
+
     public static void main(String[] args) {
 
         Grid grid = new Grid();
         Gui gui = new Gui(grid);
         grid.createPuzzle();
         gui.refreshInterface();
+
+
+
     }
 
+    @Override
+    public void updateTime(String text) {
+        ui.changeText(text);
+    }
 }
 
